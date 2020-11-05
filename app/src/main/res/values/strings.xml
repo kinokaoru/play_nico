@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">play_nico</string>
+    <string name="ranking">ランキング</string>
+    <string name="my_list">マイリスト</string>
+    <string name="nico_repo">ニコレポ</string>
+    <string name="channel">チャンネル</string>
+    <string name="viewing_history">視聴履歴</string>
+    <string name="playlist">プレイリスト</string>
+    <string name="my_page">マイページ</string>
+    <string name="temp_my_list">とりあえずマイリスト</string>
+    <string name="movie_id_input">動画id入力</string>
+    <string name="setting">設定</string>
+    <string name="account_setting">アカウント設定</string>
+    <string name="player_setting">プレーヤー設定</string>
+    <string name="cache_setting">キャッシュ設定</string>
+    <string name="account_setting_desc">ニコニコ動画のアカウントを設定</string>
+    <string name="player_setting_desc">動画再生に関する設定項目</string>
+    <string name="cache_setting_desc">動画キャッシュに関する設定項目</string>
+    <string name="repeat_play">リピート再生</string>
+    <string name="prioritize_high_resolution">高画質を優先</string>
+    <string name="hide_navigate_bar">ナビゲーションバーを隠す</string>
+    <string name="player_direction">プレーヤーの向き</string>
+    <string name="filter_comment">コメントフィルタ</string>
+    <string name="repeat_play_desc">リピート再生を標準でonにする</string>
+    <string name="prioritize_high_resolution_desc">(端末スペックによっては再生できないことがあります)</string>
+    <string name="hide_navigate_bar_desc">横画面時にフルスクリーン表示します</string>
+    <string name="player_direction_desc">再生時の画面の向きを設定</string>
+    <string name="filter_comment_desc">荒らしコメントを除去</string>
+    <string name="turn_off_caching">動画キャッシュを無効にする</string>
+    <string name="cache_manager">キャッシュマネージャー</string>
+    <string name="restrict_cache_area">キャッシュ領域の制限</string>
+    <string name="delete_video_cache">動画キャッシュを削除</string>
+    <string name="delete_thumbnail_cache">サムネイル画像を削除</string>
+    <string name="directory_setting">ディレクトリ設定</string>
+    <string name="turn_off_caching_desc">動画再生時にファイルをキャッシュしない</string>
+    <string name="cache_manager_desc">動画ファイルを個別に管理</string>
+    <string name="restrict_cache_area_desc">キャッシュ容量を制限します</string>
+    <string name="delete_video_cache_desc">動画キャッシュを一括削除</string>
+    <string name="delete_thumbnail_cache_desc">サムネイル画像を一括削除</string>
+    <string name="directory_setting_desc">キャッシュフォルダを変更</string>
+
+    <string name="list_setting">list_setting</string>
+
+    <string name="list_setting_checkbox">list_setting_checkbox</string>
+    <string name="linear_sectioned_recyclerview_vertical">Linear Sectioned RecyclerView (Vertical)</string>
+    <string name="linear_sectioned_recyclerview_horizontal">Linear Sectioned RecyclerView (Horizontal)</string>
+    <string name="grid_sectioned_recyclerview">Grid Sectioned RecyclerView</string>
+    <string name="show_all">Show All</string>
+
+
+
+</resources>

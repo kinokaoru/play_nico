@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="setting_class_names">
+        <item>@string/account_setting</item>
+        <item>@string/player_setting</item>
+        <item>@string/cache_setting</item>
+    </array>
+
+    <array name="setting_class_descs">
+        <item>@string/account_setting_desc</item>
+        <item>@string/player_setting_desc</item>
+        <item>@string/cache_setting_desc</item>
+    </array>
+
+    <array name="player_setting_titles">
+        <item>@string/repeat_play</item>
+        <item>@string/prioritize_high_resolution</item>
+        <item>@string/player_direction</item>
+        <item>@string/filter_comment</item>
+    </array>
+
+    <array name="player_setting_descs">
+        <item>@string/repeat_play_desc</item>
+        <item>@string/prioritize_high_resolution_desc</item>
+        <item>@string/player_direction_desc</item>
+        <item>@string/filter_comment_desc</item>
+    </array>
+
+    <array name="cache_setting_titles">
+        <item>@string/turn_off_caching</item>
+        <item>@string/cache_manager</item>
+        <item>@string/restrict_cache_area</item>
+        <item>@string/delete_video_cache</item>
+        <item>@string/delete_thumbnail_cache</item>
+        <item>@string/directory_setting</item>
+    </array>
+
+    <array name="cache_setting_descs">
+        <item>@string/turn_off_caching_desc</item>
+        <item>@string/cache_manager_desc</item>
+        <item>@string/restrict_cache_area_desc</item>
+        <item>@string/delete_video_cache_desc</item>
+        <item>@string/delete_thumbnail_cache_desc</item>
+        <item>@string/directory_setting_desc</item>
+    </array>
+
+
+    <array name="setting_items">
+        <item>@array/setting_item0</item>
+        <item>@array/setting_item1</item>
+        <item>@array/setting_item2</item>
+        <item>@array/setting_item3</item>
+        <item>@array/setting_item4</item>
+        <item>@array/setting_item5</item>
+        <item>@array/setting_item6</item>
+        <item>@array/setting_item7</item>
+        <item>@array/setting_item8</item>
+        <item>@array/setting_item9</item>
+        <item>@array/setting_item10</item>
+        <item>@array/setting_item11</item>
+    </array>
+
+    <array name="account_setting_items">
+        <item>@array/setting_item0</item>
+    </array>
+    <array name="player_setting_items">
+        <item>@array/setting_item1</item>
+        <item>@array/setting_item2</item>
+        <item>@array/setting_item3</item>
+        <item>@array/setting_item4</item>
+        <item>@array/setting_item5</item>
+    </array>
+    <array name="cache_setting_items">
+        <item>@array/setting_item6</item>
+        <item>@array/setting_item7</item>
+        <item>@array/setting_item8</item>
+        <item>@array/setting_item9</item>
+        <item>@array/setting_item10</item>
+        <item>@array/setting_item11</item>
+    </array>
+
+    <array name="setting_item0">
+        <item>@string/account_setting</item>
+        <item>@string/account_setting_desc</item>
+        <item>list_setting</item>
+    </array>
+
+    <array name="setting_item1">
+        <item>@string/repeat_play</item>
+        <item>@string/repeat_play_desc</item>
+        <item>list_setting_checkbox</item>
+    </array>
+    <array name="setting_item2">
+        <item>@string/prioritize_high_resolution</item>
+        <item>@string/prioritize_high_resolution_desc</item>
+        <item>list_setting_checkbox</item>
+    </array>
+    <array name="setting_item3">
+        <item>@string/hide_navigate_bar</item>
+        <item>@string/hide_navigate_bar_desc</item>
+        <item>list_setting_checkbox</item>
+    </array>
+
+    <array name="setting_item4">
+        <item>@string/player_direction</item>
+        <item>@string/player_direction_desc</item>
+        <item>list_setting</item>
+    </array>
+    <array name="setting_item5">
+        <item>@string/filter_comment</item>
+        <item>@string/filter_comment_desc</item>
+        <item>list_setting</item>
+    </array>
+    <array name="setting_item6">
+        <item>@string/cache_manager</item>
+        <item>@string/cache_manager_desc</item>
+        <item>list_setting</item>
+    </array>
+    <array name="setting_item7">
+        <item>@string/restrict_cache_area</item>
+        <item>@string/restrict_cache_area_desc</item>
+        <item>list_setting</item>
+    </array>
+    <array name="setting_item8">
+        <item>@string/turn_off_caching</item>
+        <item>@string/turn_off_caching_desc</item>
+        <item>list_setting_checkbox</item>
+    </array>
+    <array name="setting_item9">
+        <item>@string/delete_video_cache</item>
+        <item>@string/delete_video_cache_desc</item>
+        <item>list_setting</item>
+    </array>
+    <array name="setting_item10">
+        <item>@string/delete_thumbnail_cache</item>
+        <item>@string/delete_thumbnail_cache_desc</item>
+        <item>list_setting</item>
+    </array>
+    <array name="setting_item11">
+        <item>@string/directory_setting</item>
+        <item>@string/directory_setting_desc</item>
+        <item>list_setting</item>
+    </array>
+</resources>
