@@ -11,18 +11,6 @@ import java.util.ArrayList;
 
 public class ItemRecyclerViewAdapter extends RecyclerView.Adapter {
 
-    class ItemViewHolder extends RecyclerView.ViewHolder {
-        private TextView itemTitle;
-        private TextView itemDesc;
-        int viewType = 0;
-
-        public ItemViewHolder(View itemView ) {
-            super(itemView);
-            itemTitle = (TextView) itemView.findViewById(R.id.item_title);
-            itemDesc = (TextView) itemView.findViewById(R.id.item_desc);
-        }
-    }
-
     class SettingViewHolder extends RecyclerView.ViewHolder {
         private TextView itemTitle;
         private TextView itemDesc;
@@ -49,12 +37,12 @@ public class ItemRecyclerViewAdapter extends RecyclerView.Adapter {
 
     class ListData {
         CharSequence itemTitle = "";
-        CharSequence itemDescs = "";
+        CharSequence itemDesc = "";
         int viewType = 0;
 
-        ListData (CharSequence itemTitle,CharSequence itemDescs, int viewType) {
+        ListData (CharSequence itemTitle,CharSequence itemDesc, int viewType) {
             this.itemTitle = itemTitle;
-            this.itemDescs = itemDescs;
+            this.itemDesc = itemDesc;
             this.viewType = viewType;
         }
     }
@@ -81,7 +69,6 @@ public class ItemRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private void init () {
         for (int i = 0; i<sectionModel.getItemCount(); i++) {
-            //見出し(メーカー名)
             switch((String)layoutIdentifierList.get(i)){
                 case "list_setting":
                     itemList.add(new ListData(itemTitleList.get(i),itemDescList.get(0),0));
@@ -93,40 +80,36 @@ public class ItemRecyclerViewAdapter extends RecyclerView.Adapter {
 
 
 
-
+    //viewholderオブジェクト生成時の処理。viewholderは画面上で使いまわされ、スクロールされて表示すべき内容が変われば、その中身だけが入れ替えられる。ーｇ
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        RecyclerView.ViewHolder vh = null;
+        RecyclerView.ViewHolder holder = null;
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
         //viewTypeによって返すViewHolderを変える
         if (viewType== VIEWTYPE_SETTING) {
-            vh = new SettingViewHolder(inflater.inflate(R.layout.list_setting,parent, false));
+            holder = new SettingViewHolder(inflater.inflate(R.layout.list_setting,parent, false));
         } else {
-            vh = new SettingCheckBoxViewHolder(inflater.inflate(R.layout.list_setting_checkbox,parent, false));
+            holder = new SettingCheckBoxViewHolder(inflater.inflate(R.layout.list_setting_checkbox,parent, false));
         }
 
-        return vh;
-//        switch (viewType){
-        ////            case VIEWTYPE_SETTING:
-        ////                vh = new SettingViewHolder(inflater.inflate(R.layout.list_setting,parent, false));
-        ////            case VIEWTYPE_SETTING_CHECKBOX:
-        ////                vh = new SettingCheckBoxViewHolder(inflater.inflate(R.layout.list_setting_checkbox,parent, false));
-        ////        }
-//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_custom_row_layout, parent, false);
-//        return new ItemViewHolder(view);
+        return holder;
     }
 
+    //viewholderオブジェクトの表示内容を更新する時の処理
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ListData data = itemList.get(position);
 
-        if (data.viewType == VIEWTYPE_SETTING) {
-            ((SettingViewHolder) holder).itemTitle.setText(data.itemTitle);
-            ((SettingViewHolder) holder).itemDesc.setText(data.itemDescs);
-        } else {
-            ((SettingCheckBoxViewHolder) holder).itemTitle.setText(data.itemTitle);
-            ((SettingCheckBoxViewHolder) holder).itemDesc.setText(data.itemDescs);
+        switch (data.viewType) {
+            case VIEWTYPE_SETTING:
+                ((SettingViewHolder) holder).itemTitle.setText(data.itemTitle);
+                ((SettingViewHolder) holder).itemDesc.setText(data.itemDesc);
+                break;
+            case VIEWTYPE_SETTING_CHECKBOX:
+                ((SettingCheckBoxViewHolder) holder).itemTitle.setText(data.itemTitle);
+                ((SettingCheckBoxViewHolder) holder).itemDesc.setText(data.itemDesc);
+                break;
         }
     }
 
@@ -135,5 +118,11 @@ public class ItemRecyclerViewAdapter extends RecyclerView.Adapter {
         return itemTitleList.size();
     }
 
-
+    @Override
+    public int getItemViewType(int position) {
+        //指定したpositionのviewTypeを返す
+        //各行のviewTypeはinit()でitemListに登録したので
+        //そこから取り出す
+        return itemList.get(position).viewType;
+    }
 }

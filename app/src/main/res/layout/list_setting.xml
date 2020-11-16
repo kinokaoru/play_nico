@@ -29,6 +29,13 @@
                 android:gravity="start"
                 android:textSize="25sp" />
 
+            <TextView
+                android:id="@+id/tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textSize="12sp" />
+
         </LinearLayout>
         <TextView
             android:id="@+id/setting_desc"
